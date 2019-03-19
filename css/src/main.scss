@@ -166,11 +166,7 @@ header {
 	@include respond-to( 768px ) {
 		padding: 20px 30px;
 
-		&.title {
-			padding: 15px 30px;
-		}
-
-		.calculators {
+		&.title, &.calculators {
 			padding: 15px 30px;
 		}
 	}
@@ -178,11 +174,7 @@ header {
 	@include respond-to( 1024px ) {
 		padding: 25px 50px;
 
-		&.title {
-			padding: 15px 50px;
-		}
-
-		.calculators {
+		&.title, &.calculators {
 			padding: 15px 50px;
 		}
 	}
@@ -194,7 +186,7 @@ header {
 			padding: 15px 70px;
 		}
 
-		.calculators {
+		&.calculators {
 			padding: 30px 70px;
 		}
 	}
