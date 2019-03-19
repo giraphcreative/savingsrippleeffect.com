@@ -113,59 +113,22 @@ header {
 .text-right { text-align: right; }
 
 
-.rate-info {
-	background: rgba( $spruce, .1 );
-	padding: 20px;
+.columns {
+	padding: 20px 0;
 
-	h3 {
-		font-size: 1.4em;
-		line-height: 1.4em;
-		color: $maroon;
-		@include font-title;
-	}
+	.quarter {
+		text-align: center;
+		font-size: 16px;
+		line-height: 24px;
 
-	.half {
-		margin: 10px 0;
-	}
-
-	@include respond-to( 768px ) {
-		padding: 30px 40px;
-
-		.half { 
-			margin: 20px 0;
-
-			&.left {
-				padding: 0 50px 0 5px;
-			}
-
-			&.right {
-				padding: 0 5px 0 50px;
-			}
-
-			h3 {
-				padding-left: 0;
-			}
+		@include respond-to( 1024px ) {
+			padding: 10px;
 		}
 
-		.half.line {
-			border-right: 2px solid $grey-dark;
-		}
-
-		h3 {
-			padding-left: 15px;
-		}
-	}
-
-	table {
-		width: 100%;
-
-		td {
-			padding: 5px 10px 5px 0;
-
-			&.col1 {
-				font-style: italic;
-				max-width: 30%;
-			}
+		span {
+			@include font-title;
+			font-size: 22px;
+			line-height: 24px;
 		}
 	}
 }
