@@ -159,10 +159,18 @@ header {
 .pad {
 	padding: 20px;
 
+	&.calculators {
+		padding: 0;
+	}
+
 	@include respond-to( 768px ) {
 		padding: 20px 30px;
 
 		&.title {
+			padding: 15px 30px;
+		}
+
+		.calculators {
 			padding: 15px 30px;
 		}
 	}
@@ -173,6 +181,10 @@ header {
 		&.title {
 			padding: 15px 50px;
 		}
+
+		.calculators {
+			padding: 15px 50px;
+		}
 	}
 
 	@include respond-to( 1150px ) {
@@ -180,6 +192,10 @@ header {
 
 		&.title {
 			padding: 15px 70px;
+		}
+
+		.calculators {
+			padding: 30px 70px;
 		}
 	}
 }
