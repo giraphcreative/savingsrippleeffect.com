@@ -22,7 +22,7 @@ $maroon: #831528;
 $spruce: #3F525C;
 $yellow: #E1E320;
 
-$link-color: $maroon;
+$link-color: $blue-light;
 
 @import "reset";
 
@@ -386,7 +386,6 @@ header {
 	}
 
 	.half:nth-child(2) a {
-		color: $blue-light;
 		padding: 4px 4px 4px 40px;
 		line-height: 25px;
 		display: block;
@@ -411,6 +410,26 @@ header {
 
 		&.website {
 			background: url(../img/icon-website.png) top left no-repeat;
+		}
+	}
+
+	.fineprint {
+		font-size: .7em;
+		line-height: 1.5em;
+		color: #555;
+
+		@include respond-to( 768px ) {
+			padding-top: 15px;
+		}
+
+		img {
+			float: right;
+			margin: 0 0 15px 15px;
+		}
+
+		sup { 
+			vertical-align: super;
+			font-size: smaller;
 		}
 	}
 }
@@ -443,21 +462,5 @@ header {
 }
 
 
-
-.fineprint {
-	font-size: .7em;
-	line-height: 1.5em;
-	color: #555;
-
-	img {
-		float: right;
-		margin: 0 0 15px 15px;
-	}
-
-	sup { 
-		vertical-align: super;
-		font-size: smaller;
-	}
-}
 
 
