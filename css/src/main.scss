@@ -202,19 +202,12 @@ header {
 	background: $grey-extra-light url(../img/bg-topography.png) center center no-repeat;
 	background-size: cover;
 
-	.btn {
-		width: 100%;
-		white-space: nowrap;
-		text-align: center;
-		padding: 10px 0;
+	@include respond-to( 768px ) {
+		padding-bottom: 40px;
+	}
 
-		@include respond-to( 1024px ) {
-			width: 300px;
-		}
-
-		@include respond-to( 768px ) {
-			padding: 20px 0;
-		}
+	@include respond-to( 1024px ) {
+		padding-bottom: 60px;
 	}
 }
 
@@ -242,12 +235,6 @@ header {
 	&.under-calculator {
 		padding: 20px;
 		text-align: center;
-
-		@include respond-to( 768px ) {	
-			margin-top: -15px;
-			padding: 0;
-			text-align: right;
-		}
 	}
 }
 
@@ -436,15 +423,20 @@ header {
 
 
 
+.buttons {
+	@include clearfix;
+	padding: 10px 0;
+	text-align: center;
+}
+
 .btn {
 	@include font-title;
-	display: inline-block;
 	padding: 10px 15px;
 	background: $navy;
 	color: $yellow;
 	text-transform: uppercase;
-	font-size: 1.4em;
-	line-height: 1.7em;
+	font-size: 25px;
+	line-height: 25px;
 	transition: 400ms opacity ease-in-out;
 	opacity: .8;
 	border: 0;
@@ -453,6 +445,11 @@ header {
 	
 	@include respond-to( 768px ) {
 		padding: 10px 30px;
+	}
+
+	&.teal {
+		background: $teal;
+		color: white;
 	}
 
 	&:hover {
