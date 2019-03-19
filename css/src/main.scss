@@ -1,0 +1,504 @@
+
+$teal: #009076;
+$navy: #1B244F;
+$blue: #0077BA;
+$blue-light: #0377ba;
+$seafoam: #2BBFCC;
+$sky: #96D9ED;
+$purple: #8D6996;
+$forest: #006842;
+$green: #73B643;
+$lime: #A8C538;
+$red: #D42027;
+$gold: #D8BC48;
+$grey: #979B9F;
+$grey-light: #939598;
+$grey-dark: #414042;
+$black: #231F20;
+$orange: #F47D20;
+$tan: #D6D5D4;
+$maroon: #831528;
+$spruce: #3F525C;
+$yellow: #E1E320;
+
+$link-color: $maroon;
+
+@import "reset";
+
+@import "fonts";
+
+@import "mixins";
+
+@import "base";
+
+@import "grid";
+
+
+body {
+	background: lighten( $tan, 15% );
+}
+
+
+.bg-container {
+	background: white;
+	box-shadow: 0 0 50px darken( $tan, 25% );
+}
+
+
+
+header {
+	text-align: center;
+
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+
+
+// wrap div
+.wrap {
+	max-width: 1150px;
+	margin: 0 auto;
+	position: relative;
+	@include clearfix;
+}
+
+
+
+// background colors
+.bg-navy { background: $navy; }
+.bg-purple { background: $purple; }
+.bg-teal { background: $teal; }
+.bg-red { background: $red; }
+.bg-lime { background: $lime; }
+.bg-forest { background: rgba( $forest, .1 ); }
+.bg-black { background: $black; }
+.bg-seafoam { background: $seafoam; }
+.bg-blue { background: $blue; }
+.bg-black { background: $black; }
+.bg-orange { background: $orange; }
+.bg-tan { background: $tan; }
+.bg-maroon { background: $maroon; }
+.bg-grey-light { background: #999999; }
+.bg-grey-medium { background: #828282; }
+.bg-grey-dark { background: #606160; }
+.bg-spruce { background: $spruce; }
+.bg-spruce-light { background: rgba( $spruce, .5 ); }
+.bg-spruce-lighter { background: rgba( $spruce, .2 ); }
+.bg-yellow { background: $yellow; }
+
+
+// text colors
+.text-white { color: white; }
+.text-navy { color: $navy; }
+.text-purple { color: $purple; }
+.text-teal { color: $teal; }
+.text-red { color: $red; }
+.text-lime { color: $lime; }
+.text-forest { color: $forest; }
+.text-black { color: $black; }
+.text-seafoam { color: $seafoam; }
+.text-blue { color: $blue; }
+.text-black { color: $black; }
+.text-grey-light { color: $grey-light; }
+.text-grey-dark { color: $grey-dark; }
+.text-orange { color: $orange; }
+.text-maroon { color: $maroon; }
+.text-yellow { color: $yellow; }
+
+
+.text-right { text-align: right; }
+
+
+.rate-info {
+	background: rgba( $spruce, .1 );
+	padding: 20px;
+
+	h3 {
+		font-size: 1.4em;
+		line-height: 1.4em;
+		color: $maroon;
+		@include font-title;
+	}
+
+	.half {
+		margin: 10px 0;
+	}
+
+	@include respond-to( 768px ) {
+		padding: 30px 40px;
+
+		.half { 
+			margin: 20px 0;
+
+			&.left {
+				padding: 0 50px 0 5px;
+			}
+
+			&.right {
+				padding: 0 5px 0 50px;
+			}
+
+			h3 {
+				padding-left: 0;
+			}
+		}
+
+		.half.line {
+			border-right: 2px solid $grey-dark;
+		}
+
+		h3 {
+			padding-left: 15px;
+		}
+	}
+
+	table {
+		width: 100%;
+
+		td {
+			padding: 5px 10px 5px 0;
+
+			&.col1 {
+				font-style: italic;
+				max-width: 30%;
+			}
+		}
+	}
+}
+
+
+.title {
+	h2 {
+		color: $yellow;
+		@include font-title;
+		text-transform: uppercase;
+
+		@include respond-to( 768px ) {
+			font-size: 40px;
+			line-height: 40px;
+		}
+
+		@include respond-to( 1024px ) {
+			font-size: 50px;
+			line-height: 50px;
+		}
+	}
+
+}
+
+
+// padding
+.pad {
+	padding: 20px;
+
+	@include respond-to( 768px ) {
+		padding: 20px 30px;
+
+		&.title {
+			padding: 15px 30px;
+		}
+	}
+
+	@include respond-to( 1024px ) {
+		padding: 25px 50px;
+
+		&.title {
+			padding: 15px 50px;
+		}
+	}
+
+	@include respond-to( 1150px ) {
+		padding: 30px 70px;
+
+		&.title {
+			padding: 15px 70px;
+		}
+	}
+}
+
+
+
+.intro {
+	@include clearfix;
+	color: $navy;
+	font-size: 1.4em;
+	line-height: 1.6em;
+
+	.btn {
+		width: 100%;
+		white-space: nowrap;
+		text-align: center;
+		padding: 10px 0;
+
+		@include respond-to( 1024px ) {
+			width: 300px;
+		}
+
+		@include respond-to( 768px ) {
+			padding: 20px 0;
+		}
+	}
+}
+
+
+.savings-thermometer {
+	@include respond-to( 500px ) {
+		float: right;
+		margin: 0 0 10px 10px;
+	}
+
+	@include respond-to( 768px ) {
+		margin: 0 0 15px 15px;
+	}
+
+	@include respond-to( 860px ) {
+		margin: 0 0 25px 25px;
+	}
+}
+
+
+.quiet {
+	color: $grey-dark;
+	font-size: .8em;
+	
+	&.under-calculator {
+		padding: 20px;
+		text-align: center;
+
+		@include respond-to( 768px ) {	
+			margin-top: -15px;
+			padding: 0;
+			text-align: right;
+		}
+	}
+}
+
+
+// calculator styles
+.calculators {
+	.calculator {
+		padding: 20px;
+		color: white;
+		position: relative;
+
+		.third.first {
+			text-align: center;
+		}
+
+		@include respond-to( 768px ) {
+			margin: 0 0 20px;
+			border-radius: 25px;
+
+			.third { 
+				width: 30%;
+
+				&.first {
+					width: 40%;
+
+					img {
+						margin-top: 10px;
+					}
+				}
+			}
+		}
+
+
+		@include respond-to( 768px ) {
+			&.credit, &.loan-auto, &.loan-personal {
+				position: relative;
+				padding: 20px;
+			}
+		}
+
+
+		.rate-display {
+			@include clearfix;
+			padding-bottom: 20px;
+			
+			.start {
+				display: block;
+				text-align: center;
+				font-size: 1.2em;
+				padding: 0 0 10px 0;
+			}
+
+			h2, .end {
+				float: left;
+				@include font-title;
+			}
+
+			h2 {
+				width: 60%;
+				font-size: 60px;
+				line-height: 1.2em;
+				padding: 0 10px 0 0;
+				text-align: right;
+
+				@include respond-to( 768px ) { width: 78%; }
+			}
+
+			.end {
+				width: 30%;
+				font-size: 17px;
+				line-height: 1.2em;
+
+				span {
+					font-size: 30px;
+				}
+
+				@include respond-to( 768px ) { width: 22%; }
+			}
+		}
+		
+		.result {
+			@include font-bold;
+			font-size: 1.8em;
+			line-height: 1.2em;
+			text-align: center;
+			padding: 15px 0 0;
+
+			strong {
+				display: block;
+			}
+		}
+
+		@include respond-to( 768px ) {
+			&.home .result {
+				padding-top: 115px;
+			}
+		}
+	}	
+}
+
+
+
+.ad {
+	@include respond-to( 1100px ) {
+		padding: 30px 40px;
+	}
+
+	img {
+		display: block;
+	}
+}
+
+
+
+.error {
+	@include font-bold;
+	padding: 10px 15px;
+	background: $red;
+	color: white;
+	border-radius: 8px;
+	display: none;
+}
+
+
+
+.footer-logo {
+	padding: 20px;
+
+	@include respond-to( 768px ) {
+		padding: 20px 40px;
+	}
+
+	@include respond-to( 1024px ) {
+		padding: 20px 60px;
+	}
+
+	.half:first-child {
+		text-align: center;
+
+		@include respond-to( 768px ) {
+			padding: 10px 0;
+		}
+	}
+
+	.half:nth-child(2) a {
+		color: $blue-light;
+		padding: 4px 4px 4px 40px;
+		line-height: 25px;
+		display: block;
+		font-size: .9em;
+
+		@include respond-to( 768px ) {
+			padding: 6px 6px 6px 42px;
+			font-size: 1.1em;
+		}
+
+		&.address {
+			background: url(../img/icon-location.png) top left no-repeat;
+		}
+
+		&.phone {
+			background: url(../img/icon-phone.png) top left no-repeat;
+		}
+
+		&.email {
+			background: url(../img/icon-email.png) top left no-repeat;
+		}
+
+		&.website {
+			background: url(../img/icon-website.png) top left no-repeat;
+		}
+	}
+}
+
+
+
+.btn {
+	@include font-title;
+	display: inline-block;
+	padding: 10px 15px;
+	background: $navy;
+	color: $yellow;
+	text-transform: uppercase;
+	font-size: 1.4em;
+	line-height: 1.7em;
+	transition: 400ms opacity ease-in-out;
+	opacity: .8;
+	border: 0;
+	cursor: pointer;
+	border-radius: 20px;
+	
+	@include respond-to( 768px ) {
+		padding: 10px 30px;
+	}
+
+	&:hover {
+		opacity: 1;
+		color: white;
+	}
+}
+
+
+
+.fineprint {
+	padding: 10px 20px;
+	font-size: .7em;
+	line-height: 1.5em;
+	color: #555;
+
+	@include respond-to( 768px ) {
+		padding: 10px 30px;
+	}
+
+	@include respond-to( 1024px ) {
+		padding: 15px 40px;
+	}
+
+	img {
+		float: right;
+		margin: 0 0 15px 15px;
+	}
+
+	sup { 
+		vertical-align: super;
+		font-size: smaller;
+	}
+}
+
+
