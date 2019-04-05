@@ -427,6 +427,14 @@ header {
 	@include clearfix;
 	padding: 10px 0;
 	text-align: center;
+
+	.btn {
+		display: block;
+
+		@include respond-to( 768px ) {
+			display: inline-block;
+		}
+	}
 }
 
 .btn {
