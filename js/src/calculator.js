@@ -17,9 +17,9 @@ $(function(){
 		error_text:"",
 	});
 
-	$(".calculator.credit").accrue({
+	$(".calculator.loan-personal").accrue({
 		mode: "compare",
-		response_output_div: ".result.credit",
+		response_output_div: ".result.personal",
 		response_compare:"You Save: <strong>$%savings%</strong>",
 		error_text:"",
 	});
