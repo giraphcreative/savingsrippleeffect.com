@@ -212,6 +212,15 @@ header {
 }
 
 
+.video {
+	padding: 20px;
+
+	@include respond-to( 768px ) {
+		padding: 30px 40px;
+	}
+}
+
+
 .savings-thermometer {
 	@include respond-to( 500px ) {
 		float: right;
